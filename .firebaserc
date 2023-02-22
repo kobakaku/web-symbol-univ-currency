@@ -1,0 +1,36 @@
+{
+  "projects": {
+    "default": "symbol-univ-currency-test",
+    "mainnet": "symbol-univ-currency",
+    "testnet": "symbol-univ-currency-test"
+  },
+  "targets": {
+    "symbol-univ-currency-test": {
+      "hosting": {
+        "web": [
+          "symbol-univ-currency-test"
+        ],
+        "admin": [
+          "admin-symbol-univ-currency-test"
+        ],
+        "lp": [
+          "lp-symbol-univ-currency-test"
+        ]
+      }
+    },
+    "symbol-univ-currency": {
+      "hosting": {
+        "web": [
+          "symbol-univ-currency"
+        ],
+        "admin": [
+          "admin-symbol-univ-currency"
+        ],
+        "lp": [
+          "lp-symbol-univ-currency"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
