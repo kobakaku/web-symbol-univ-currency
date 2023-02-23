@@ -34,5 +34,5 @@ import { RouterModule } from '@angular/router';
   styles: [],
 })
 export class AppComponent {
-  title = 'web';
+  title = 'lp';
 }
