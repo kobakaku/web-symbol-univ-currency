@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import { EventContext } from 'firebase-functions';
 import { db } from '.';
 import { FieldValue } from '@google-cloud/firestore';
