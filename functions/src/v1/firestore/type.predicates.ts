@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import type { BaseUser, NewUser, User, BaseUserUpdate, UserUpdate } from './user/type';
 
 const isString = (value: unknown): value is string => typeof value === 'string';
