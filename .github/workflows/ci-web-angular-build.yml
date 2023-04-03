@@ -27,7 +27,7 @@ jobs:
       - name: Create empty environment file
         run: touch ./projects/web/src/environments/environment.ts
       - name: Create empty environment file for testnet
-        run: touch ./projects/web/src/environments/environment.testnet.dev.ts
+        run: touch ./projects/web/src/environments/environment.testnet.prod.ts
 
       - run: npm ci
       - run: npm run build:web
