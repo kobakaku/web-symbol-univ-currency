@@ -51,7 +51,7 @@ cypress/screenshots/*
 
 # Environment
 environment.ts
-environment.testnet.development.ts
-environment.testnet.prod.ts
+environment.development.ts
+environment.production.ts
 environment.mainnet.development.ts
-environment.mainnet.prod.ts
+environment.mainnet.production.ts
