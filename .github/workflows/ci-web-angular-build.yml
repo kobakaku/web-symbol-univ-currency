@@ -21,5 +21,13 @@ jobs:
           cache: 'npm'
           cache-dependency-path: |
             package-lock.json
+
+      - name: Create environment file's directory
+        run: mkdir -p ./projects/web/src/environments
+      - name: Create empty environment file
+        run: touch ./projects/web/src/environments/environment.ts
+      - name: Create empty environment file for testnet
+        run: touch ./projects/web/src/environments/environment.testnet.dev.ts
+
       - run: npm ci
       - run: npm run build:web
