@@ -51,13 +51,13 @@
   },
   "emulators": {
     "auth": {
-      "port": 9099
+      "port": 9399
     },
     "functions": {
-      "port": 5011
+      "port": 5101
     },
     "firestore": {
-      "port": 8090
+      "port": 8180
     },
     "hosting": {
       "port": 5010
@@ -66,10 +66,10 @@
       "port": 8099
     },
     "storage": {
-      "port": 9299
+      "port": 9499
     },
     "eventarc": {
-      "port": 9399
+      "port": 9599
     },
     "ui": {
       "enabled": true
