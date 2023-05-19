@@ -9,12 +9,6 @@
       "hosting": {
         "web": [
           "symbol-univ-currency-test"
-        ],
-        "admin": [
-          "admin-symbol-univ-currency-test"
-        ],
-        "lp": [
-          "lp-symbol-univ-currency-test"
         ]
       }
     },
@@ -22,12 +16,6 @@
       "hosting": {
         "web": [
           "symbol-univ-currency"
-        ],
-        "admin": [
-          "admin-symbol-univ-currency"
-        ],
-        "lp": [
-          "lp-symbol-univ-currency"
         ]
       }
     }
