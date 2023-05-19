@@ -10,8 +10,8 @@
     "test": "ng test --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless --no-watch --no-progress --code-coverage",
     "lint": "ng lint",
-    "e2e": "ng run cypress-open",
-    "e2e:ci": "ng run cypress-run"
+    "e2e": "cypress open",
+    "e2e:ci": "cypress run"
   },
   "private": true,
   "dependencies": {
