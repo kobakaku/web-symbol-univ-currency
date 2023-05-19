@@ -34,6 +34,6 @@ jobs:
         run: echo $ANGULAR_WEB_ENVIRONMENT | base64 --decode --ignore-garbage > ./projects/web/src/environments/environment.development.ts
 
       - run: npm ci
-      - run: npm run e2e:web:ci
+      - run: npm run e2e:ci
       - name: Delete environment file
         run: rm ./projects/web/src/environments/environment.development.ts
