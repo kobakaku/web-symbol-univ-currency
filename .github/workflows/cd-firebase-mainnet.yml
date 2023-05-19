@@ -51,8 +51,78 @@ jobs:
 
       - run: npm ci
       - run: npm run e2e:web:ci
-      - name: Delete environment file
-        run: rm ./projects/web/src/environments/environment.mainnet.development.ts
+
+  admin-angular-test:
+    name: Admin Angular Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+      - run: npm ci
+      - run: npm run test:admin:ci
+
+  admin-angular-e2e:
+    name: Admin Angular E2E
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+      - run: npm ci
+      - run: npm run e2e:admin:ci
+
+  lp-angular-test:
+    name: LP Angular Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+      - run: npm ci
+      - run: npm run test:lp:ci
+
+  lp-angular-e2e:
+    name: LP Angular E2E
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+      - run: npm ci
+      - run: npm run e2e:lp:ci
 
   firebase-functions-test:
     name: Firebase Functions Test
@@ -110,10 +180,8 @@ jobs:
 
       - run: npm ci
       - run: npm run build:web
-
-      - name: Delete environment file
-        run: rm ./projects/web/src/environments/environment.mainnet.production.ts
-
+      - run: npm run build:admin
+      - run: npm run build:lp
       - run: npm ci
         working-directory: ./functions
       - run: npm run build

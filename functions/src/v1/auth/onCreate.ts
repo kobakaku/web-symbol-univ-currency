@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import functions from '../../utils/firebase/baseFunction';
 import { triggerOnce } from '../../utils/firebase/triggerOnce';
 import { setUser, User } from '../firestore/user/model';
